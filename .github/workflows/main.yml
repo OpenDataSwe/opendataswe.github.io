@@ -1,0 +1,35 @@
+name: "Pages publish CI"
+
+on:
+  push:
+    branches:
+      - main
+  pull_request: { }
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: dtolnay/rust-toolchain@master
+        with:
+          toolchain: stable
+          targets: wasm32-unknown-unknown
+          components: clippy
+      - name: Rustfmt
+        run: 'cargo fmt --all --check'
+      - name: Clippy
+        run: 'cargo clippy -- -D warnings'
+  publish:
+    name: Pages
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: dtolnay/rust-toolchain@master
+        with:
+          toolchain: stable
+          targets: wasm32-unknown-unknown
+      - uses: swatinem/rust-cache@v2
+      - run: 'cargo install trunk && cargo install wasm-opt'
+      - name: 'Build and publish'
+        run: 'bash ${GITHUB_WORKSPACE}/.github/publish-pages.sh'

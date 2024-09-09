@@ -1,0 +1,15 @@
+[package]
+name = "offline-runner"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+anyhow = { workspace = true }
+clap = { workspace = true }
+convert_case = { workspace = true }
+markdown = { workspace = true }
+skatt-lib = { workspace = true }
+tokio = { workspace = true }
+
+[lints]
+workspace = true

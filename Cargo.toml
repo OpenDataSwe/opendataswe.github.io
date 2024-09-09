@@ -1,0 +1,35 @@
+[workspace]
+members = [ "offline-runner","skatt-fe","skatt-lib"]
+resolver = "2"
+
+[workspace.dependencies]
+skatt-lib = { path = "./skatt-lib" }
+
+anyhow = { version = "1.0.86" }
+convert_case = { version = "0.6.0" }
+clap = { version = "4.5.16", features = ["derive"] }
+log = "0.4.22"
+markdown = { version = "1.0.0-alpha.20" }
+plotters = "0.3.6"
+plotters-backend = "0.3.6"
+plotters-canvas = "0.3.0"
+reqwest = { version = "0.12.7", default-features = false, features = ["rustls-tls", "json"] }
+rustc-hash = { version = "2.0.0" }
+rust_decimal = { version = "1.36.0", features = ["serde"] }
+rust_decimal_macros = { version = "1.36.0" }
+serde = { version = "1.0.209", features = ["derive"] }
+serde_json = { version = "1.0.127" }
+tokio = { version = "1.40.0", features = ["macros", "rt", "time"] }
+yew = { version = "0.21.0", features = ["csr"] }
+wasm-bindgen-futures = { version = "0.4.43" }
+wasm-logger = "0.2.0"
+web-sys = { version = "0.3.70", features = ["HtmlSelectElement", "HtmlOptionsCollection", "HtmlOptionElement", "HtmlCanvasElement", "HtmlDivElement"] }
+
+[workspace.lints]
+clippy.pedantic = { level = "warn", priority = -1 }
+clippy.allow_attributes = "warn"
+clippy.enum_variant_names = "allow"
+clippy.new_without_default = "allow"
+clippy.module_name_repetitions = "allow"
+clippy.missing_errors_doc = "allow"
+clippy.struct_field_names = "allow"
