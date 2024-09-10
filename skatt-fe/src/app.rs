@@ -316,7 +316,7 @@ impl Component for App {
         html! {
             <>
                 <div>
-                    <span>{"Koden för uträkningarna finns "}</span><a href="https://github.com/OpenDataSwe/opendataswe.github.io">{"här."}</a><Info content={SKATTEBERAKNING}/>
+                    <span>{"Koden för uträkningarna finns "}</span><a href="https://github.com/OpenDataSwe/opendataswe.github.io">{"här."}</a><span>{" "}</span><Info content={SKATTEBERAKNING}/>
                 </div>
                 <br/>
                 <div>

@@ -260,6 +260,7 @@ impl Component for PlotPicker {
                             .collect::<Html>()
                     }
                     </select>
+                    <span>{" "}</span>
                     <Info content={self.selected.help_html()}/>
                 </div>
                 {slider}

@@ -184,9 +184,9 @@ impl Component for RangePicker {
         let on_end_changed = ctx.link().callback(Self::Message::EndChanged);
         html! {
             <>
-                <NumberInput info_html={START} input_id={"start_calc"} input_name={"start_calc"} label_text={"Start"} err_msg={self.start_input_err.clone()} on_change={on_start_changed} value={self.start_input.map(|s| s.to_string()).unwrap_or_default()} />
-                <NumberInput info_html={STEG} input_id={"step_calc"} input_name={"step_calc"} label_text={"Steg"} err_msg={self.step_input_err.clone()} on_change={on_step_changed} value={self.step_input.map(|s| s.to_string()).unwrap_or_default()} />
-                <NumberInput info_html={SLUT} input_id={"end_calc"} input_name={"end_calc"} label_text={"Slut"} err_msg={self.end_input_err.clone()} on_change={on_end_changed} value={self.end_input.map(|s| s.to_string()).unwrap_or_default()} />
+                <NumberInput info_html={START} input_id={"start_calc"} input_name={"start_calc"} label_text={"Start "} err_msg={self.start_input_err.clone()} on_change={on_start_changed} value={self.start_input.map(|s| s.to_string()).unwrap_or_default()} />
+                <NumberInput info_html={STEG} input_id={"step_calc"} input_name={"step_calc"} label_text={"Steg "} err_msg={self.step_input_err.clone()} on_change={on_step_changed} value={self.step_input.map(|s| s.to_string()).unwrap_or_default()} />
+                <NumberInput info_html={SLUT} input_id={"end_calc"} input_name={"end_calc"} label_text={"Slut "} err_msg={self.end_input_err.clone()} on_change={on_end_changed} value={self.end_input.map(|s| s.to_string()).unwrap_or_default()} />
             </>
 
         }

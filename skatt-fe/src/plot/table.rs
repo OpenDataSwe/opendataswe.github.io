@@ -155,7 +155,7 @@ impl Component for TaxTable {
                             .map(|ts| {
                                 html! {
                                     <tr>
-                                        <td>{ts.category} <Info content={ts.help} /></td>
+                                        <td>{ts.category}<span>{" "}</span><Info content={ts.help} /></td>
                                         <td>{ts.percentage}</td>
                                         <td>{ts.absolute}</td>
                                     </tr>

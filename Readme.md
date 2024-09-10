@@ -1,10 +1,12 @@
 # Skatteberäkning
 
-En enkel webb-applikation för att visa skatt
+En enkel webb-applikation för att visa skatt.  
 
 ## Syfte
 
-Att visa vilken skatt man betalar vid en given lön, och hur den skatten i sig är uppdelad.
+Att visa vilken skatt man betalar vid en given lön, och hur den skatten i sig är uppdelad.  
+Samt, att förmedla hur skatten beräknas för att göra det enklare för den enskilde att förstå 
+sin egen beskattning.  
 
 ## Bakgrund
 
@@ -40,15 +42,14 @@ När inkomsterna överstiger `10000:-` per månad blir beräkningarna närmast i
 
 ### Ålder
 
-Ålder behöver anges endast för att ta reda på huruvida inkomsttagaren fyllt 66 år vid årets ingång, 
+Ålder behöver anges för att ta reda på huruvida inkomsttagaren fyllt 66 år vid årets ingång, 
 vissa skatteregler skiljer sig för dessa.  
-
 
 ### Kommun
 
 Kommun behöver anges då de kommunala skattesatserna ska kunna hämtas från skatteverkets api. 
 
-Apiet kan hittas [här](https://www7.skatteverket.se/portal/apier-och-oppna-data/utvecklarportalen/oppetdata/Skattesatser%20per%20kommun).  
+APIet kan hittas [här](https://www7.skatteverket.se/portal/apier-och-oppna-data/utvecklarportalen/oppetdata/Skattesatser%20per%20kommun).  
 
 ### Medlem i Svenska kyrkan
 
