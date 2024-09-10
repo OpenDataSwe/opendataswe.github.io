@@ -12,4 +12,4 @@ git config --global user.name OpenDataSwe
 git fetch origin
 git add .
 git commit -m "Publish new page version"
-git push origin `git subtree split --prefix skatt-fe/dist pages-tmp-branch`:gh-pages --force
+git push origin `git subtree split --prefix dist pages-tmp-branch`:gh-pages --force

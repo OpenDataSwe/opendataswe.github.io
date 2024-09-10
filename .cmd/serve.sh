@@ -1,4 +1,4 @@
 #!/bin/sh
 set -e
 cd skatt-fe
-trunk serve
+trunk serve --dist=../dist
