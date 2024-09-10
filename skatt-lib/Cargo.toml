@@ -5,13 +5,11 @@ edition = "2021"
 
 [dependencies]
 anyhow = { workspace = true }
-log = { workspace = true }
 reqwest = { workspace = true }
 rustc-hash = { workspace = true }
 rust_decimal = { workspace = true }
 rust_decimal_macros = { workspace = true }
 serde = { workspace = true }
-tokio = { workspace = true }
 
 [lints]
 workspace = true

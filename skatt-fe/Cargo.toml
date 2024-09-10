@@ -6,16 +6,10 @@ edition = "2021"
 [dependencies]
 skatt-lib = { workspace = true }
 
-anyhow = { workspace = true }
-log = { workspace = true }
 plotters = { workspace = true }
 plotters-canvas = { workspace = true }
 rustc-hash = { workspace = true }
-rust_decimal = { workspace = true }
-rust_decimal_macros = { workspace = true }
 yew = { workspace = true }
-wasm-bindgen-futures = { workspace = true }
-wasm-logger = { workspace = true }
 web-sys = { workspace = true, features = ["DomRect"] }
 
 [lints]
