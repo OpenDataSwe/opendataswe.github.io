@@ -1,6 +1,8 @@
 #!/bin/sh
 set -ex
 git checkout -b pages-tmp-branch
+rm .gitignore
+printf "target\n" > .gitignore
 CWD=$(pwd)
 cd ${GITHUB_WORKSPACE}
 bash ./.cmd/build-fe.sh
