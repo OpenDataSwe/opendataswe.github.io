@@ -30,6 +30,6 @@ jobs:
           toolchain: stable
           targets: wasm32-unknown-unknown
       - uses: swatinem/rust-cache@v2
-      - run: 'cargo install trunk && cargo install wasm-opt'
+      - run: 'cargo install --locked trunk && cargo install --locked wasm-opt'
       - name: 'Build and publish'
         run: 'bash ${GITHUB_WORKSPACE}/.github/publish-pages.sh'
