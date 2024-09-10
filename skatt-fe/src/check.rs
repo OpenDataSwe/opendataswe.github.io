@@ -37,8 +37,10 @@ impl Component for Checkbox {
         });
         html! {
             <div>
-                <label for={input_name}>{label_text}</label><Info content={info_html}/>
+                <label for={input_name}>{label_text}</label>
                 <input name={input_name} id={input_id} type="checkbox" {oninput} checked={checked}/>
+                <span>{" "}</span>
+                <Info content={info_html}/>
             </div>
         }
     }

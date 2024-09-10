@@ -47,8 +47,8 @@ impl Component for Info {
         if self.show {
             html! {
                 <>
-                <button onclick={toggle_on_click} style="background:none;color:inherit">{"?"}</button>
-                <div style="background-color:#e1e2e3;position:absolute;width:60%;margin-left:20%">
+                <button onclick={toggle_on_click} style="background:none;color:inherit">{"mindre"}</button>
+                <div style="background-color:#e1e2e3;position:absolute;width:60%;margin-left:20%;padding-left:20px;padding-right:20px">
                     <span style="width:60%;z-index:1"><RawHTML inner_html={ctx.props().content}/></span>
                     <p onclick={close_on_click}>{"Stäng"}</p>
                 </div>
@@ -56,7 +56,7 @@ impl Component for Info {
             }
         } else {
             html! {
-                <button onclick={toggle_on_click}>{"?"}</button>
+                <button onclick={toggle_on_click}>{"mer"}</button>
             }
         }
     }

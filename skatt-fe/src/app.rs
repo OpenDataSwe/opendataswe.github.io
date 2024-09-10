@@ -1,5 +1,6 @@
 use crate::check::Checkbox;
 use crate::error::SimpleErrorDisplay;
+use crate::info::Info;
 use crate::input::{valid_year, NumberInput};
 use crate::plot::picker::PlotPicker;
 use crate::select::church::ChurchSelect;
@@ -10,7 +11,7 @@ use skatt_lib::api::tax_by_municipality::MunicipalTaxSpecification;
 use skatt_lib::api::Client;
 use skatt_lib::calculate::under_66_years_old;
 use skatt_lib::generated::municipalities::Municipalities;
-use skatt_lib::generated::readme::{ALDER, KOMMUN, MEDLEM_I_SVENSKA_KYRKAN};
+use skatt_lib::generated::readme::{ALDER, KOMMUN, MEDLEM_I_SVENSKA_KYRKAN, SKATTEBERAKNING};
 use skatt_lib::CURRENT_YEAR;
 use std::rc::Rc;
 use yew::virtual_dom::VNode;
@@ -315,6 +316,10 @@ impl Component for App {
         html! {
             <>
                 <div>
+                    <span>{"Koden för uträkningarna finns "}</span><a href="https://github.com/OpenDataSwe/opendataswe.github.io">{"här."}</a><Info content={SKATTEBERAKNING}/>
+                </div>
+                <br/>
+                <div>
                     <NumberInput input_id={"dob"} input_name={"dob"} label_text={"Födelseår "} err_msg={n} {on_change} info_html={ALDER} value={v} />
                     {when_loading_year}
                 </div>
@@ -326,7 +331,7 @@ impl Component for App {
                 <SimpleErrorDisplay message={self.err.clone()}/>
                 <br/>
                 <div>
-                    <Checkbox info_html={MEDLEM_I_SVENSKA_KYRKAN} on_change={on_church_member_change} checked={self.church_member} label_text={"Medlem i Svenska kyrkan"} input_name={"church_member"} input_id={"church_member"} />
+                    <Checkbox info_html={MEDLEM_I_SVENSKA_KYRKAN} on_change={on_church_member_change} checked={self.church_member} label_text={"Medlem i Svenska kyrkan "} input_name={"church_member"} input_id={"church_member"} />
                 </div>
                 {
                     select_congregation

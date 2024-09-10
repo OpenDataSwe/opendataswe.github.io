@@ -2,7 +2,7 @@
 set -ex
 git checkout -b pages-tmp-branch
 rm .gitignore
-printf "target\n" > .gitignore
+printf "target\nCargo.lock\n" > .gitignore
 CWD=$(pwd)
 cd ${GITHUB_WORKSPACE}
 bash ./.cmd/build-fe.sh
